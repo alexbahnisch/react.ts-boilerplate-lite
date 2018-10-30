@@ -43,7 +43,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]")
+        loaders: [
+          ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]"),
+          {
+            loader: "typings-for-css-modules-loader",
+            options: {
+              modules: true,
+              namedExport: true
+            }
+          }
+        ]
       }
     ]
   },

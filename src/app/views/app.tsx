@@ -1,19 +1,17 @@
-"use strict";
+"use strict"
 import * as React from "react"
-import {Component} from "react"
 
-const CSS = require("./app.css");
+// @ts-ignore
+import CSS = require("./app.css")
 
-
-interface Props {
-  children: string;
+interface IProps {
+  children: string
 }
 
+export class App extends React.Component<IProps, undefined> {
 
-export class App extends Component<Props, undefined> {
-
-  render(): JSX.Element {
-    const {children} = this.props;
+  public render(): JSX.Element {
+    const {children} = this.props
 
     return (
       <div className={CSS.root}>

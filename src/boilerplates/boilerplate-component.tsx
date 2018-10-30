@@ -1,32 +1,27 @@
-"use strict";
+"use strict"
 import * as React from "react"
-import {Component, ErrorInfo} from "react"
 
-
-interface Props {
+interface IProps {
   children?: any
 }
 
-
-interface State {
+interface IState {
 }
-
 
 type SnapShot = any
 
+export class BoilerplateComponent extends React.Component<IProps, IState> {
+  public static displayName = "BoilerplateComponent"
+  public static defaultProps = {}
 
-export class BoilerplateComponent extends Component<Props, State> {
-  static displayName = "BoilerplateComponent";
-  static defaultProps = {};
-
-  _element: Element;
+  private element: Element
 
   /**
    * Called first when mounting.
    */
-  constructor(props: Props) {
-    super(props);
-    console.log(`${BoilerplateComponent.displayName}.constructor(props)`)
+  constructor(props: IProps) {
+    super(props)
+    console.log(`${this.getClass().displayName}.constructor(props)`)
   }
 
   /**
@@ -34,66 +29,74 @@ export class BoilerplateComponent extends Component<Props, State> {
    * Called second when mounting.
    * Called first when updating.
    */
-  static getDerivedStateFromProps(props: Props, state: State): object | null {
-    console.log(`${BoilerplateComponent.displayName}.getDerivedStateFromProps(props, state)`);
-    return null;
+  public static getDerivedStateFromProps(props: IProps, state: IState): object | null {
+    console.log(`${BoilerplateComponent.displayName}.getDerivedStateFromProps(props, state)`)
+
+    return null
   }
 
   /**
    * Called forth/last when mounting.
    */
-  componentDidMount(): void {
-    console.log(`${BoilerplateComponent.displayName}.componentDidMount()`)
+  public componentDidMount(): void {
+    console.log(`${this.getClass().displayName}.componentDidMount()`)
   }
 
   /**
    * Called second when updating.
    * Return value dictates if further updating lifecycle hooks are called.
    */
-  shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
-    console.log(`${BoilerplateComponent.displayName}.shouldComponentUpdate(nextProps, nextState)`);
-    return true;
+  public shouldComponentUpdate(nextProps: IProps, nextState: IState): boolean {
+    console.log(`${this.getClass().displayName}.shouldComponentUpdate(nextProps, nextState)`)
+
+    return true
   }
 
   /**
    * Called forth when updating.
    */
-  getSnapshotBeforeUpdate(prevProps: Props, prevState: State): SnapShot {
-    console.log(`${BoilerplateComponent.displayName}.getSnapshotBeforeUpdate(nextProps, nextState)`);
+  public getSnapshotBeforeUpdate(prevProps: IProps, prevState: IState): SnapShot {
+    console.log(`${this.getClass().displayName}.getSnapshotBeforeUpdate(nextProps, nextState)`)
+
     return {}
   }
 
   /**
    * Called fifth/last when updating.
    */
-  componentDidUpdate(prevProps: Props, prevState: State, snapshot: SnapShot): void {
-    console.log(`${BoilerplateComponent.displayName}.componentDidUpdate(nextProps, nextState, snapShot)`);
+  public componentDidUpdate(prevProps: IProps, prevState: IState, snapshot: SnapShot): void {
+    console.log(`${this.getClass().displayName}.componentDidUpdate(nextProps, nextState, snapShot)`)
   }
 
   /**
    * Called when un-mounting.
    */
-  componentWillUnmount(): void {
-    console.log(`${BoilerplateComponent.displayName}.componentWillUnmount(nextProps, nextState, snapShot)`);
+  public componentWillUnmount(): void {
+    console.log(`${this.getClass().displayName}.componentWillUnmount(nextProps, nextState, snapShot)`)
   }
 
   /**
    * Called when there is an error during rendering, in a lifecycle hook, or in the constructor of any child component.
    */
-  componentDidCatch(error: Error, info: ErrorInfo): void {
-    console.log(`${BoilerplateComponent.displayName}.componentDidCatch(error, info)`);
+  public componentDidCatch(error: Error, info: React.ErrorInfo): void {
+    console.log(`${this.getClass().displayName}.componentDidCatch(error, info)`)
+  }
+
+  // noinspection JSMethodCanBeStatic, TsLint
+  public getClass() {
+    return BoilerplateComponent
   }
 
   /**
    * Called third when mounting.
    * Called third when updating.
    */
-  render(): any {
-    const {children} = this.props;
+  public render(): any {
+    const {children} = this.props
 
     return (
-      <div ref={(element) => {
-        this._element = element
+      <div ref={(element: any) => {
+        this.element = element
       }}>
         {children}
       </div>
