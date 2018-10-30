@@ -2,12 +2,9 @@
 .idea
 dist
 node_modules
-scripts
 
 # Files:
 .gitignore
 docker-compose.yml
-Dockerfile
 LICENSE
-Makefile
 README.md

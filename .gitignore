@@ -1,6 +1,6 @@
 # Root:
 .idea
-#dist
+dist
 node_modules
 
 # Wildcards:

@@ -5,11 +5,12 @@ import {Component} from "react"
 const CSS = require("./app.css");
 
 
-export interface AppProps {
+interface Props {
   children: string;
 }
 
-export class App extends Component<AppProps, undefined> {
+
+export class App extends Component<Props, undefined> {
 
   render(): JSX.Element {
     const {children} = this.props;
