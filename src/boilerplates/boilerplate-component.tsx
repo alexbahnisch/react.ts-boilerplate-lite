@@ -31,7 +31,6 @@ export class BoilerplateComponent extends React.Component<IProps, IState> {
    */
   public static getDerivedStateFromProps(props: IProps, state: IState): object | null {
     console.log(`${BoilerplateComponent.displayName}.getDerivedStateFromProps(props, state)`)
-
     return null
   }
 
@@ -48,7 +47,6 @@ export class BoilerplateComponent extends React.Component<IProps, IState> {
    */
   public shouldComponentUpdate(nextProps: IProps, nextState: IState): boolean {
     console.log(`${this.getClass().displayName}.shouldComponentUpdate(nextProps, nextState)`)
-
     return true
   }
 
@@ -57,7 +55,6 @@ export class BoilerplateComponent extends React.Component<IProps, IState> {
    */
   public getSnapshotBeforeUpdate(prevProps: IProps, prevState: IState): SnapShot {
     console.log(`${this.getClass().displayName}.getSnapshotBeforeUpdate(nextProps, nextState)`)
-
     return {}
   }
 

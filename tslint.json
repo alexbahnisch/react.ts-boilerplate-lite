@@ -116,10 +116,9 @@
       "ignore-static"
     ],
     "no-unnecessary-class": true,
-    "no-unsafe-any": true,
+    "no-unsafe-any": false,
     "no-unsafe-finally": true,
     "no-unused-expression": true,
-    "no-unused-variable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-void-expression": true,
@@ -127,11 +126,14 @@
     "prefer-object-spread": true,
     "radix": true,
     "restrict-plus-operands": true,
-    "strict-boolean-expressions": true,
+    "strict-boolean-expressions": [
+      true,
+      "allow-null-union",
+      "allow-undefined-union"
+    ],
     "strict-type-predicates": true,
     "switch-default": true,
     "triple-equals": true,
-    "typeof-compare": true,
     "use-default-type-parameter": true,
     "use-isnan": true,
     "cyclomatic-complexity": [
@@ -211,7 +213,7 @@
       "check-multiline-start"
     ],
     "match-default-export-name": true,
-    "newline-before-return": true,
+    "newline-before-return": false,
     "newline-per-chained-call": true,
     "new-parens": true,
     "no-angle-bracket-type-assertion": true,

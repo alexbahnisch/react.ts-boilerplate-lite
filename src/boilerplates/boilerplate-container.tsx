@@ -56,7 +56,6 @@ class _BoilerplateContainer extends React.Component<Props, IState> {
    */
   public static getDerivedStateFromProps(props: Props, state: IState): object | null {
     console.log(`${_BoilerplateContainer.displayName}.getDerivedStateFromProps(props, state)`)
-
     return null
   }
 

@@ -1,19 +1,18 @@
 {
   "compilerOptions": {
     "allowJs": false,
-    "alwaysStrict": true,
     "experimentalDecorators": true,
     "jsx": "react",
     "module": "commonjs",
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
     "pretty": true,
+    "rootDir": "./src/app",
     "sourceMap": false,
+    "strict": true,
     "suppressImplicitAnyIndexErrors": false,
     "target": "es5"
   },
   "include": [
-    "./src/package/**/*.ts",
-    "./src/package/**/*.tsx"
+    "./src/app/**/*.ts",
+    "./src/app/**/*.tsx"
   ]
 }
