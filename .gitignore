@@ -1,7 +1,8 @@
 # Root:
-.idea
-dist
-node_modules
+/.idea
+/build
+/dist
+/node_modules
 
 # Wildcards:
 !**.gitkeep

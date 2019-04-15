@@ -11,7 +11,7 @@ interface IProps {
 export class App extends React.Component<IProps, undefined> {
 
   public render(): JSX.Element {
-    const {children} = this.props
+    const { children } = this.props
 
     return (
       <div className={CSS.root}>
