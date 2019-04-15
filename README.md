@@ -4,7 +4,6 @@ A boilerplate for creating typescript react/webpack apps.
 
 ### Requirements
 
-* docker & docker-compose
 * gnu coreutils (windows version can be downloaded from [http://gnuwin32.sourceforge.net/packages/coreutils.htm]())
 * node 8 or greater, npm 6 or greater
 * coreutils, node and npm added to the system path
@@ -28,10 +27,10 @@ npm run watch
 Then to deploy the app with live-reloading, in a separate terminal run:
 
 ```
-docker-compose up
+npm run serve
 ```
 
-The application will be available at [http://localhost:8080]().
+The application will be available at [http://localhost:9000]().
 
 ## Production
 

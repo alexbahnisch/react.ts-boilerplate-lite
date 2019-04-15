@@ -64,7 +64,7 @@
     "lint:scripts-fix": "eslint --fix webpack.config.js",
     "test": "exit 0",
     "watch": "npm run setup && webpack --progress --watch",
-    "serve": "live-server --entry-file=index.html --watch=./build ./build",
+    "serve": "live-server --entry-file=index.html --port=9000 --watch=./build ./build",
     "setup": "npm run clean && mkdir build"
   }
 }
